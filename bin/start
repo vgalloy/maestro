@@ -1,0 +1,19 @@
+#!/bin/bash
+source param
+
+
+(echo -e $INFO $GREEN"STARTING COMMON"$NORMAL
+    echo -e $INFO "Starting"
+    cd /etc/init.d
+    ./$TOMCAT_COMMON start
+)
+(echo -e $INFO $GREEN"STARTING MAESTRO"$NORMAL
+    echo -e $INFO "Starting" 
+    cd /etc/init.d
+    ./$TOMCAT_MAESTRO start
+)
+(echo -e $INFO $GREEN"STARTING OPEN_DJ"$NORMAL
+    echo -e $INFO "Starting" 
+    cd /etc/init.d
+    ./opendj start
+)

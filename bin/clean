@@ -1,0 +1,11 @@
+#!/bin/bash
+source param
+
+(echo -e $INFO $GREEN"CLEANING"$NORMAL
+    cd $TOMCAT_MAESTRO_APPS
+    for f in *.war
+    do
+	echo -e $INFO "Deleting" $f
+	rm $f
+    done
+)

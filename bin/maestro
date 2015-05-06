@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+    echo "Specify at least one rule"
+    echo "You can use \"--help\" for more informations about commands"
+    exit
+elif [ $1 == "--help" ]; then
+    ./help $2
+    exit
+elif [ $1 == "help" ]; then
+    ./help
+elif [ $1 == "clean" ]; then
+    ./clean
+elif [ $1 == "deploy" ]; then
+    ./deploy
+elif [ $1 == "start" ]; then
+    ./start
+elif [ $1 == "stop" ]; then
+    ./stop
+elif [ $1 == "copy" ]; then
+    ./copy
+else
+    echo "Invalid instruction \"$1\""
+    echo "You can use \"help\" for more informations about commands"
+    exit
+fi
+if [ $# -ne 1 ]; then
+    ./maestro ${*:2}
+fi
+exit

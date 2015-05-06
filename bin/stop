@@ -1,0 +1,13 @@
+#!/bin/bash
+source param
+
+(echo -e $INFO $GREEN"STOPING COMMON"$NORMAL
+    echo -e $INFO "Stoping"
+    cd /etc/init.d
+    ./$TOMCAT_COMMON stop
+)
+(echo -e $INFO $GREEN"STOPING MAESTRO"$NORMAL
+    echo -e $INFO "Stoping" 
+    cd /etc/init.d
+    ./$TOMCAT_MAESTRO stop
+)

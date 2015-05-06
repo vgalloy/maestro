@@ -1,0 +1,5 @@
+#!/bin/bash
+source param
+
+echo -e $INFO $GREEN"SHOWING LOG"$YELLOW" (Ctrl + c to interrupt)"$NORMAL
+tail -f /opt/$TOMCAT_MAESTRO/logs/catalina.out

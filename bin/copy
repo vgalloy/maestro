@@ -1,0 +1,21 @@
+#!/bin/bash
+source param
+
+(echo -e $INFO $GREEN"COPY"$NORMAL
+    cd $MAESTRO_TARGET
+    ls
+    for f in *.war
+    do
+	echo -e $INFO "Copying" $f
+	cp $f $TOMCAT_MAESTRO_APPS
+    done
+)
+(echo -e $INFO $GREEN"LINK CREATION"$NORMAL
+    cd $TOMCAT_MAESTRO_APPS
+    for f in *.war
+    do
+	name=`echo $f | awk -F'_' '{print $1}'`".war"
+	echo -e $INFO "Create link" $name
+	ln -s $f $name
+    done
+)
