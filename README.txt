@@ -8,4 +8,5 @@
 2) Configure :
    	     conf/config
    	     conf/maestro_workspace
-2) start script command : ./maestro
+3) start script command : ./maestro
+   	 Server need ~4Gio RAM to start
