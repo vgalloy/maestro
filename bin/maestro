@@ -9,7 +9,7 @@ fi
 
 if [ -z $1 ]; then
     echo "Specify at least one rule"
-    echo "You can use \"--help\" for more informations about commands"
+    echo "You can use \"help\" for more informations about commands"
     exit
 elif [ $1 == "--help" ]; then
     ./help $2
@@ -26,6 +26,8 @@ elif [ $1 == "stop" ]; then
     ./stop
 elif [ $1 == "copy" ]; then
     ./copy
+elif [ $1 == "showlog" ]; then
+    ./showlog
 else
     echo "Invalid instruction \"$1\""
     echo "You can use \"help\" for more informations about commands"

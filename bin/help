@@ -6,31 +6,19 @@ if [ -z $1 ]; then
     echo -e "\tdeploy"
     echo -e "\tstart"
     echo -e "\tstop"
+    echo -e "\tshowlog"
     echo -e "\tcopy"
     echo -e "--help [command] for more informations"
-    exit
-fi
-if [ $1 == "clean" ]; then
+elif [ $1 == "clean" ]; then
     echo "Clean tomcat_mastro apps folder"
-    exit
-fi
-if [ $1 == "deploy" ]; then
-    echo "Deploy the project"
-    exit
-fi
-if [ $1 == "start" ]; then
-    echo "Start tomcat_common and tomcat_maestro"
-    exit
-fi
-if [ $1 == "stop" ]; then
-    echo "Stop tomcat_common and tomcat_maestro"
-    exit
-fi
-if [ $1 == "copy" ]; then
+elif [ $1 == "copy" ]; then
     echo "Copy the war files from workspace to tomcat_maestro app directory"
-    exit
-fi
-if [ $1 == "showlog" ]; then
+elif [ $1 == "deploy" ]; then
+    echo "Deploy the project"
+elif [ $1 == "showlog" ]; then
     echo "Show live log from catalina.out"
-    exit
+elif [ $1 == "start" ]; then
+    echo "Start tomcat_common and tomcat_maestro"
+elif [ $1 == "stop" ]; then
+    echo "Stop tomcat_common and tomcat_maestro"
 fi
