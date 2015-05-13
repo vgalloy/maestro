@@ -1,12 +1,14 @@
 #!/bin/bash
 source param
-
+(echo -e $INFO $GREEN"ADD CVFORGE"$NORMAL
+    echo -e $INFO "adding cvforge"
+    cp $TOMCAT_MAESTRO"/maestro-cvforge*.war" $TOMCAT_MAESTRO_APPS
+)
 (echo -e $INFO $GREEN"ADD PERMISSIONS"$NORMAL
     echo -e $INFO "adding permissions"
     cd $TOMCAT_MAESTRO_APPS
     chmod +r *
 )
-
 (echo -e $INFO $GREEN"STARTING COMMON"$NORMAL
     echo -e $INFO "Starting"
     cd /etc/init.d
