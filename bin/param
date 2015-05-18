@@ -3,6 +3,7 @@
 source ../conf/config
 
 MAESTRO_TARGET=`echo "../conf/"$MAESTRO"/target/deploy"`
+CVFORGE_TARGET=`echo "../conf/"$CVFORGE"/target/deploy"`
 TOMCAT_MAESTRO_APPS=`echo "/opt/"$TOMCAT_MAESTRO$APPS_ROOT`
 NORMAL="\\033[0;39m"
 RED="\\033[0;31m"

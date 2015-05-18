@@ -5,3 +5,4 @@ TOMCAT_COMMON="tomcat_common"
 APPS_ROOT="/apps"
 #Root workspace for maestro (could be symbolic)
 MAESTRO="maestro_workspace"
+CVFORGE="cvforge_workspace"
