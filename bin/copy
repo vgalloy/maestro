@@ -10,7 +10,7 @@ source param
     done
 )
 (echo -e $INFO $GREEN"COPY CVFORGE"$NORMAL
-   cd $CVFORGE_TARGET
+    cd $CVFORGE_TARGET
     for f in *.war
     do
 	echo -e $INFO "Copying" $f
