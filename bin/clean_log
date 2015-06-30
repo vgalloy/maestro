@@ -1,0 +1,13 @@
+#!/bin/bash
+source param
+
+(echo -e $INFO $GREEN"CLEANING LOG"$NORMAL
+    cd /opt/tomcat_maestro/logs
+    rm *.log
+    rm *.out
+    rm *.txt
+    cd /opt/tomcat_common/logs
+    rm *.log
+    rm *.out
+    rm *.txt
+)
