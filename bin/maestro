@@ -29,6 +29,8 @@ elif [ $1 == "copy" ]; then
     ./copy
 elif [ $1 == "showlog" ]; then
     ./showlog
+elif [ $1 == "clean_log" ]; then
+    ./clean_log
 else
     echo -e $ERROR "Invalid instruction \"$1\""
     echo -e $ERROR "You can use \"help\" for more informations about commands"
