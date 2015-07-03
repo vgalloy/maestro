@@ -3,14 +3,18 @@
 if [ -z $1 ]; then
     echo -e "The different command are :"
     echo -e "\tclean"
+    echo -e "\tclean_log"
     echo -e "\tdeploy"
     echo -e "\tstart"
     echo -e "\tstop"
     echo -e "\tshowlog"
     echo -e "\tcopy"
+    echo -e "\tfirst_start"
     echo -e "--help [command] for more informations"
 elif [ $1 == "clean" ]; then
     echo "Clean tomcat_mastro apps folder"
+elif [ $1 == "clean_log" ]; then
+    echo "Clean all log into tomcats"
 elif [ $1 == "copy" ]; then
     echo "Copy the war files from workspace to tomcat_maestro app directory"
 elif [ $1 == "deploy" ]; then
@@ -21,4 +25,6 @@ elif [ $1 == "start" ]; then
     echo "Start tomcat_common and tomcat_maestro"
 elif [ $1 == "stop" ]; then
     echo "Stop tomcat_common and tomcat_maestro"
+elif [ $1 == "first_start" ]; then
+    echo "Run application for the first time"
 fi

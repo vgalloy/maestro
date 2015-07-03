@@ -1,0 +1,30 @@
+#!/bin/bash
+
+source param
+
+# Clone projet
+(
+rm -fr ~/.m2
+cd ~/workspace/
+rm -fr *
+echo -e $INFO "Clone projet you must enter your login"
+git clone https://github.com/excilys/maestro.git
+echo -e $INFO "Install the project"
+cd ~/workspace/maestro
+mvn clean install
+)
+
+# Create simlink
+(cd ~/Bureau/maestro/conf
+echo -e $INFO "Create simlink"
+unlink maestro_workspace
+ln -s ~/workspace/maestro maestro_workspace
+)
+
+# Start project
+(
+echo -e $INFO "Start to deploy the project"
+cd ~/Bureau/maestro/bin
+sudo ./maestro deploy
+echo -e $INFO "See https://maestrodev.excilys.com/maestro-fdt"
+)
