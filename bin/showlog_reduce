@@ -1,0 +1,5 @@
+#!/bin/bash                                                                                                                                                  
+source param
+
+echo -e $INFO $GREEN"SHOWING LOG"$YELLOW" (Ctrl + c to interrupt)"$NORMAL
+./showlog | grep -E "ERROR|WARN|GRAVE|Started" --color

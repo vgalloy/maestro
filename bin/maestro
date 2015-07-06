@@ -33,6 +33,8 @@ elif [ $1 == "clean_log" ]; then
     ./clean_log
 elif [ $1 == "first_start" ]; then
     ./first_start
+elif [ $1 == "showlog_reduce" ]; then
+    ./showlog_reduce
 else
     echo -e $ERROR "Invalid instruction \"$1\""
     echo -e $ERROR "You can use \"help\" for more informations about commands"
